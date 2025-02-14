@@ -1,8 +1,9 @@
+import SavedJobs from "@/components/views/saved-jobs"
 import { PageFC } from "@/utils/types"
 import React from "react"
 
-const SavedJobs: PageFC = () => {
-  return <div>SavedJobs</div>
+const SavedJobsPage: PageFC = () => {
+  return <SavedJobs />
 }
 
-export default SavedJobs
+export default SavedJobsPage

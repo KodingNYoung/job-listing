@@ -1,3 +1,5 @@
+"use client"
+
 import Typography from "@/components/atoms/typography"
 import { ROUTES } from "@/utils/constants"
 import { dummyJobs } from "@/utils/dummy"
@@ -5,21 +7,23 @@ import { FC } from "@/utils/types"
 import dayjs from "dayjs"
 import relativeTime from "dayjs/plugin/relativeTime"
 import Image from "next/image"
-import Link from "next/link"
-import React from "react"
+import { useRouter } from "next/navigation"
+import React, { ReactNode } from "react"
 
 dayjs.extend(relativeTime)
 
 type Props = {
-  actions?: []
+  actions?: ReactNode
 }
 
 const ListingCard: FC<Props> = ({ actions }) => {
+  const router = useRouter()
+
   const job = dummyJobs[0]
   return (
-    <Link
-      href={`${ROUTES.JOB_DETAILS}/1`}
-      className="border border-gray-100 rounded hover:shadow-sm transition-shadow duration-200 flex gap-4 items-start p-3 group/listing-card"
+    <div
+      onClick={() => router.push(`${ROUTES.JOB_DETAILS}/1`)}
+      className="border border-gray-100 rounded hover:shadow-sm transition-shadow duration-200 flex gap-4 items-start p-3 group/listing-card cursor-pointer"
     >
       <Image
         src={job.employer_logo}
@@ -57,8 +61,8 @@ const ListingCard: FC<Props> = ({ actions }) => {
           Posted {dayjs(job.job_posted_at_datetime_utc).fromNow()}
         </Typography>
       </section>
-      {actions && actions.length ? "actions" : null}
-    </Link>
+      {actions ?? null}
+    </div>
   )
 }
 

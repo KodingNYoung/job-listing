@@ -8,6 +8,7 @@ import Link from "next/link"
 import React from "react"
 import ApplyAction from "./apply-action"
 import SaveAction from "./save-action"
+import BackButton from "./back-button"
 
 dayjs.extend(relativeTime)
 
@@ -19,8 +20,9 @@ const JobDetails: FC<Props> = ({ id }) => {
   const job = dummyJobs[0]
   return (
     <div className="px-5 pb-10 flex flex-col">
-      <header className="md:px-10 sticky top-[75px] z-1 bg-white border-b border-gray-100 py-5 md:py-10">
-        <div className="flex justify-between items-center flex-wrap">
+      <header className="md:px-10 sticky top-[75px] z-1 bg-white border-b border-gray-100 py-5 md:pb-10 md:pt-5">
+        <BackButton />
+        <div className="flex justify-between items-center flex-wrap pt-5">
           <Link
             href={job.employer_website}
             target="_blank"
