@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* @import url(../assets/icomoon/style.css); */
+  html {
+    /*noinspection CssUnresolvedCustomProperty*/
+    font-size: 16px;
+    @apply scroll-smooth antialiased;
+  }
+  body {
+    @apply min-h-screen bg-neutral-50;
+  }
+}
+
+@layer components {
+  .container {
+    @apply !w-full !max-w-[1280px] mx-auto;
+  }
+}
