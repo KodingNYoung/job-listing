@@ -6,7 +6,9 @@ const AppLayout: FC = ({ children }) => {
   return (
     <div className="flex flex-col">
       <Header />
-      {children}
+      <main className="pt-[76px] min-h-screen container bg-white border-x border-neutral-100">
+        {children}
+      </main>
     </div>
   )
 }

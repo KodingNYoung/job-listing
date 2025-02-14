@@ -4,7 +4,7 @@ import UserDropdown from "./user-dropdown"
 
 const Header: FC = () => {
   return (
-    <header className="bg-white border-b border-neutral-100 shadow-sm  sticky top-0">
+    <header className="bg-white border-b border-neutral-100 shadow-sm fixed top-0 left-0 w-full">
       <div className="container flex justify-between items-center gap-2 py-3 px-5">
         <span className="text-2xl font-bold">LOGO</span>
         <UserDropdown />

@@ -3,6 +3,7 @@ import { LayoutFC } from "@/utils/types"
 import { HeroUIProvider } from "@heroui/react"
 import { DMSans } from "@/assets/fonts"
 import "../styles/globals.css"
+import AppLayout from "@/components/templates/app-layout"
 
 export const metadata: Metadata = {
   title: "Job Listings",
@@ -13,7 +14,9 @@ const RootLayout: LayoutFC = ({ children }) => {
   return (
     <html lang="en" className={DMSans.variable}>
       <body>
-        <HeroUIProvider>{children}</HeroUIProvider>
+        <HeroUIProvider>
+          <AppLayout>{children}</AppLayout>
+        </HeroUIProvider>
       </body>
     </html>
   )
