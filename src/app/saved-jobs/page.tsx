@@ -1,8 +1,8 @@
-import { PageFC } from "@/utils/types";
-import React from "react";
+import { PageFC } from "@/utils/types"
+import React from "react"
 
 const SavedJobs: PageFC = () => {
-  return <div>SavedJobs</div>;
-};
+  return <div>SavedJobs</div>
+}
 
-export default SavedJobs;
+export default SavedJobs

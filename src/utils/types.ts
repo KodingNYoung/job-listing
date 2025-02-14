@@ -1,36 +1,37 @@
-import { HTMLProps, PropsWithChildren, ReactElement } from "react";
+import { HTMLProps, PropsWithChildren, ReactElement } from "react"
 
-export type TWClassNames = HTMLProps<HTMLElement>["className"];
+export type TWClassNames = HTMLProps<HTMLElement>["className"]
 export type FC<PropsType = unknown> = {
   (
     props: { className?: TWClassNames } & PropsWithChildren<PropsType>, // These line automatically add `className` and `children` to all component using the `FC` type
     context?: unknown
-  ): ReactElement | null;
-  displayName?: string;
-};
+  ): ReactElement | null
+  displayName?: string
+}
 export type LayoutFC<
-  ParamsType = { [paramsKey: string]: string | string[] | undefined }
+  ParamsType = { [paramsKey: string]: string | string[] | undefined },
 > = {
-  (props: PropsWithChildren<{ params?: ParamsType }>, context?: unknown):
-    | ReactElement
-    | null
-    | Promise<ReactElement | null>;
-  displayName?: string;
-};
+  (
+    props: PropsWithChildren<{ params?: Promise<ParamsType> }>,
+    context?: unknown
+  ): ReactElement | null | Promise<ReactElement | null>
+  displayName?: string
+}
 
 export type PageFC<
-  ParamsType = { [paramsKey: string]: string | string[] | undefined },
+  ParamsType =
+    | { [paramsKey: string]: string | string[] | undefined }
+    | Promise<unknown>,
   SearchParamsType = {
-    [searchParamsKey: string]: string | string[] | undefined;
-  }
+    [searchParamsKey: string]: string | string[] | undefined
+  },
 > = {
   (
     props: {
-      params?: ParamsType;
-      searchParams?: SearchParamsType;
+      params?: Promise<ParamsType>
+      searchParams?: Promise<SearchParamsType>
     },
     context?: unknown
-  ): ReactElement | null | Promise<ReactElement | null>;
-  displayName?: string;
-};
-
+  ): ReactElement | null | Promise<ReactElement | null>
+  displayName?: string
+}
