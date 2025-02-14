@@ -106,7 +106,7 @@ export default {
         "button1": ["16px", { lineHeight: "20px", fontWeight: 700 }],
         "title-sm": ["16px", { lineHeight: "20px", fontWeight: 600 }],
         "title-md": ["18px", { lineHeight: "23px", fontWeight: 700 }],
-        "title-lg": ["22px", { lineHeight: "28px", fontWeight: 600 }],
+        "title-lg": ["20px", { lineHeight: "28px", fontWeight: 600 }],
         "headline-sm": ["24px", { lineHeight: "32px", fontWeight: 600 }],
         "headline-md": ["28px", { lineHeight: "36px", fontWeight: 600 }],
         "headline-lg": ["32px", { lineHeight: "40px", fontWeight: 700 }],

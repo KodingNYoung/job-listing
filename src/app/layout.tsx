@@ -4,6 +4,7 @@ import { HeroUIProvider } from "@heroui/react"
 import { DMSans } from "@/assets/fonts"
 import "../styles/globals.css"
 import AppLayout from "@/components/templates/app-layout"
+import { ToastContainer } from "react-toastify"
 
 export const metadata: Metadata = {
   title: "Job Listings",
@@ -17,6 +18,7 @@ const RootLayout: LayoutFC = ({ children }) => {
         <HeroUIProvider>
           <AppLayout>{children}</AppLayout>
         </HeroUIProvider>
+        <ToastContainer position="bottom-left" />
       </body>
     </html>
   )

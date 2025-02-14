@@ -4,3 +4,7 @@ export enum EmploymentTypes {
   PARTTIME = "PARTTIME",
   INTERN = "INTERN",
 }
+
+export enum StorageKeys {
+  SAVED_JOBS = "saved.jobs",
+}
