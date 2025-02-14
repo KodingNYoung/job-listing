@@ -21,7 +21,6 @@ const UserDropdown: FC = () => {
           fallback={<Icon name="icon-user-01" size={20} />}
           className="h-[50px] w-[50px]"
           isBordered
-          color="primary"
         />
       }
     >
