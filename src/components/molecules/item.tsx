@@ -1,7 +1,7 @@
 import { cls } from "@/utils/helpers"
 import { FC } from "@/utils/types"
 import React, { ReactNode } from "react"
-import Typography, { TypographyProps } from "../atoms/Typography"
+import Typography, { TypographyProps } from "../atoms/typography"
 
 type Props = {
   startContent?: ReactNode

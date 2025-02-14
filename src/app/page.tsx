@@ -1,5 +1,5 @@
 // import { getJobs } from "@/lib/data";
-import JobListings from "@/components/views/jobs"
+import JobListings from "@/components/views/job-listings"
 import { PageFC } from "@/utils/types"
 
 const HomePage: PageFC = async () => {
