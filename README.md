@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Job Listing Web App
 
-## Getting Started
+## 🚀 Overview
 
-First, run the development server:
+This is a **Job Board Web Application** built using **Next.js 15**, allowing users to browse, search, and apply for jobs. It features job listings, filtering, detailed job pages, a save job feature with Context API, and a job application form.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## ✨ Features
+
+- ✅ **Job Listings Page**: Displays paginated job postings (title, company, location, salary).
+- ✅ **Search & Filters**: Users can search for jobs by keyword and filter by category.
+- ✅ **Job Details Page**: Displays job descriptions, company details, and application instructions.
+- ✅ **Save Jobs Feature**: Users can save jobs to `localStorage` (managed with Context API).
+- ✅ **Job Application Form**: Users can apply by submitting a form with validation.
+- ✅ **Code Quality**: Enforced with Husky and Prettier.
+- ❌ **Authentication**: Not implemented.
+
+## 🫠 Tech Stack
+
+- **Framework**: Next.js 15 (React 19)
+- **State Management**: Context API
+- **Styling**: TailwindCSS
+- **Component Library**: HeroUI
+- **API Integration**: JSearch API (via RapidAPI)
+- **Form Validation**: Zod
+- **Utilities**: Day.js, React Toastify, use-debounce
+- **Code Quality**: Husky & Prettier
+
+## 📚 Installation & Setup
+
+### 1️⃣ Clone the Repository
+
+```sh
+git clone https://github.com/KodingnNYoung/job-listing.git
+cd job-listing
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2️⃣ Install Dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+npm install
+# OR
+yarn install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3️⃣ Set Up Environment Variables
 
-## Learn More
+Create a `.env.local` file and add your **Rapid API Key**:
 
-To learn more about Next.js, take a look at the following resources:
+```sh
+NEXT_PUBLIC_RAPID_API_KEY=your-rapid-api-key
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 4️⃣ Run the Development Server
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```sh
+npm run dev
+# OR
+yarn dev
+```
 
-## Deploy on Vercel
+The app will be available at `http://localhost:3000`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 💼 API Usage
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This app fetches job listings from the **JSearch API** via RapidAPI.
+
+### 🔹 Fetch Jobs Example (GET Request)
+
+```ts
+const fetchJobs = async (query: string) => {
+  const response = await fetch(
+    `https://jsearch.p.rapidapi.com/search?query=${query}`,
+    {
+      headers: {
+        "X-RapidAPI-Key": process.env.RAPID_API_KEY,
+        "X-RapidAPI-Host": "jsearch.p.rapidapi.com",
+      },
+    }
+  )
+  return response.json()
+}
+```
+
+## 🚀 Deployment
+
+The application is deployed on **Vercel** and can be accessed here:
+
+🔗 **[Live Preview](https://job-listing-chi-beige.vercel.app/)**
+
+To deploy manually, follow these steps:
+
+```sh
+npm run build
+npm run start
+```
+
+Alternatively, push to GitHub and connect to **Vercel Dashboard** for automatic deployment.
+
+## 🎯 Future Improvements
+
+- 🔹 Add **authentication** (NextAuth.js or Firebase Auth)
+- 🔹 Implement **unit tests** with Jest & React Testing Library
+- 🔹 Support **GraphQL API** integration
+
+## 🐝 License
+
+MIT License. Free to use and modify.
