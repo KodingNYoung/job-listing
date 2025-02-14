@@ -114,6 +114,9 @@ export default {
         "display-md": ["45px", { lineHeight: "52px", fontWeight: 600 }],
         "display-lg": ["57px", { lineHeight: "64px", fontWeight: 600 }],
       },
+      boxShadow: {
+        menu: "0px 8px 20px 0px #0000001A",
+      },
     },
   },
   darkMode: "class",
@@ -125,6 +128,16 @@ export default {
           colors: {
             "primary": {
               DEFAULT: "#5A38F4",
+              50: "#F7F9FF",
+              100: "#E4EBFF",
+              200: "#D8E2FF",
+              300: "#C9D7FF",
+              400: "#BACBFF",
+              500: "#ABC0FF",
+              600: "#7F99E4",
+              700: "#526DBB",
+              800: "#2F4993",
+              900: "#061541",
               //@ts-ignore
               used: "#5A38F4",
               hover: "#3B82F6",

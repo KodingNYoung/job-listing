@@ -1,6 +1,6 @@
-import Icon from "@/components/atoms/Icon"
+import Icon from "@/components/atoms/icon"
 import AppPopover from "@/components/molecules/app-popover"
-import Item from "@/components/molecules/Item"
+import Item from "@/components/molecules/item"
 import { ROUTES } from "@/utils/constants"
 import { FC } from "@/utils/types"
 import { Avatar, Divider } from "@heroui/react"
@@ -20,6 +20,8 @@ const UserDropdown: FC = () => {
         <Avatar
           fallback={<Icon name="icon-user-01" size={20} />}
           className="h-[50px] w-[50px]"
+          isBordered
+          color="primary"
         />
       }
     >
