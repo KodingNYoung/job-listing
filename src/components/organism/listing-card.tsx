@@ -2,31 +2,31 @@
 
 import Typography from "@/components/atoms/typography"
 import { ROUTES } from "@/utils/constants"
-import { dummyJobs } from "@/utils/dummy"
-import { FC } from "@/utils/types"
+import { FC, JobListing } from "@/utils/types"
 import dayjs from "dayjs"
 import relativeTime from "dayjs/plugin/relativeTime"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
 import React, { ReactNode } from "react"
+import logoFallback from "@/assets/images/logo-fallback.png"
 
 dayjs.extend(relativeTime)
 
 type Props = {
   actions?: ReactNode
+  job: JobListing
 }
 
-const ListingCard: FC<Props> = ({ actions }) => {
+const ListingCard: FC<Props> = ({ actions, job }) => {
   const router = useRouter()
 
-  const job = dummyJobs[0]
   return (
     <div
-      onClick={() => router.push(`${ROUTES.JOB_DETAILS}/1`)}
+      onClick={() => router.push(`${ROUTES.JOB_DETAILS}/${job.job_id}`)}
       className="border border-gray-100 rounded hover:shadow-sm transition-shadow duration-200 flex gap-4 items-start p-3 group/listing-card cursor-pointer"
     >
       <Image
-        src={job.employer_logo}
+        src={job.employer_logo || logoFallback}
         height={56}
         width={56}
         alt="company logo"
@@ -57,7 +57,10 @@ const ListingCard: FC<Props> = ({ actions }) => {
           overflowLines={2}
         >
           {job.job_employment_type}{" "}
-          {!!job.job_salary && `• ${job.job_salary} ${job.job_salary_period}`} •
+          {!!job.job_min_salary &&
+            `• $${job.job_min_salary} - $${job.job_max_salary} per ${job.job_salary_period}`}
+        </Typography>
+        <Typography variants="body-xs" className="text-gray-500">
           Posted {dayjs(job.job_posted_at_datetime_utc).fromNow()}
         </Typography>
       </section>

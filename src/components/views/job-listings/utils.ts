@@ -16,3 +16,6 @@ export const INIT_PARAMS = {
     value: `${EmploymentTypes.CONTRACTOR},${EmploymentTypes.FULLTIME},${EmploymentTypes.INTERN},${EmploymentTypes.PARTTIME}`,
   },
 } as const
+
+export type ListingsQueryKeys =
+  (typeof LISTINGS_QUERY_KEYS)[keyof typeof LISTINGS_QUERY_KEYS]
