@@ -92,3 +92,21 @@ export type FormState<SP = unknown, EP = unknown> =
           payload?: EP
         }
     )
+
+export type JobListing = {
+  job_id: string
+  employer_logo: string
+  job_title: string
+  employer_name: string
+  job_city: string
+  job_state: string
+  job_country: string
+  job_employment_type: string
+  job_salary_currency: string
+  job_min_salary: number
+  job_posted_at_datetime_utc: number
+  job_max_salary: number
+  job_salary_period: string
+  employer_website: string
+  job_description?: string
+}

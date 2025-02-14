@@ -4,6 +4,7 @@ export type IconNames =
   | "icon-heart"
   | "icon-link-external-02"
   | "icon-list"
+  | "icon-loading-01"
   | "icon-log-in-01"
   | "icon-log-out-01"
   | "icon-trash-01"
