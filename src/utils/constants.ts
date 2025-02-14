@@ -1,4 +1,4 @@
-export const RAPID_API_KEY = process.env.NEXT_PUBLIC_RAPID_API_KEY;
+export const RAPID_API_KEY = process.env.NEXT_PUBLIC_RAPID_API_KEY
 
 // ROUTES
 export const ROUTES = {
@@ -7,6 +7,6 @@ export const ROUTES = {
   JOB_DETAILS: "/job-details",
   LOGIN: "/login",
   REGISTER: "/register",
-} as const;
+} as const
 
-export const RAPID_API_BASEURL = "https://jsearch.p.rapidapi.com/";
+export const RAPID_API_BASEURL = "https://jsearch.p.rapidapi.com/"

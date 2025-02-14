@@ -1,11 +1,11 @@
-import Icon from "@/components/atoms/Icon";
-import AppPopover from "@/components/molecules/app-popover";
-import Item from "@/components/molecules/Item";
-import { ROUTES } from "@/utils/constants";
-import { FC } from "@/utils/types";
-import { Avatar, Divider } from "@heroui/react";
-import Link from "next/link";
-import React from "react";
+import Icon from "@/components/atoms/Icon"
+import AppPopover from "@/components/molecules/app-popover"
+import Item from "@/components/molecules/Item"
+import { ROUTES } from "@/utils/constants"
+import { FC } from "@/utils/types"
+import { Avatar, Divider } from "@heroui/react"
+import Link from "next/link"
+import React from "react"
 
 const UserDropdown: FC = () => {
   return (
@@ -64,7 +64,7 @@ const UserDropdown: FC = () => {
         />
       </Link>
     </AppPopover>
-  );
-};
+  )
+}
 
-export default UserDropdown;
+export default UserDropdown

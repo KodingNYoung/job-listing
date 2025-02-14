@@ -1,4 +1,4 @@
-const dummyJobs = [
+export const dummyJobs = [
   {
     job_id: "BunZdhiPUiWqujp2AAAAAA==",
     job_title: "Software Developer",
@@ -921,4 +921,4 @@ const dummyJobs = [
     job_onet_soc: "15113200",
     job_onet_job_zone: "4",
   },
-];
+]

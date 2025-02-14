@@ -1,8 +1,8 @@
-import { FC } from "@/utils/types";
-import React from "react";
+import { FC } from "@/utils/types"
+import React from "react"
 
 const Loading: FC = () => {
-  return <div>Loading...</div>;
-};
+  return <div>Loading...</div>
+}
 
-export default Loading;
+export default Loading

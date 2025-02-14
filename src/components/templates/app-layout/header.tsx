@@ -1,6 +1,6 @@
-import { FC } from "@/utils/types";
-import React from "react";
-import UserDropdown from "./user-dropdown";
+import { FC } from "@/utils/types"
+import React from "react"
+import UserDropdown from "./user-dropdown"
 
 const Header: FC = () => {
   return (
@@ -10,7 +10,7 @@ const Header: FC = () => {
         <UserDropdown />
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

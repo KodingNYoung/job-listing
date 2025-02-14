@@ -1,5 +1,5 @@
-import { heroui } from "@heroui/react";
-import type { Config } from "tailwindcss";
+import { heroui } from "@heroui/react"
+import type { Config } from "tailwindcss"
 
 export default {
   content: [
@@ -10,7 +10,7 @@ export default {
   ],
   theme: {
     colors: {
-      primary: {
+      "primary": {
         DEFAULT: "#5A38F4",
         used: "#5A38F4",
         hover: "#3B82F6",
@@ -19,7 +19,7 @@ export default {
         writeup: "#2B3674",
         light: "#EFF4FB",
       },
-      gray: {
+      "gray": {
         DEFAULT: "#64748B",
         50: "#F8FAFC",
         100: "#F1F5F9",
@@ -32,7 +32,7 @@ export default {
         800: "#1E293B",
         900: "#0F172A",
       },
-      neutral: {
+      "neutral": {
         DEFAULT: "#77777A",
         50: "#F8F8F8",
         100: "#E4E2E6",
@@ -45,7 +45,7 @@ export default {
         800: "#303034",
         900: "#1B1B1F",
       },
-      success: {
+      "success": {
         DEFAULT: "#10B981",
         50: "#ECFDF5",
         100: "#D1FAE5",
@@ -58,7 +58,7 @@ export default {
         800: "#065F46",
         900: "#064E3B",
       },
-      warning: {
+      "warning": {
         DEFAULT: "#F59E0B",
         50: "#FFFBEB",
         100: "#FEF3C7",
@@ -71,7 +71,7 @@ export default {
         800: "#92400E",
         900: "#78350F",
       },
-      error: {
+      "error": {
         DEFAULT: "#F43F5E",
         50: "#FFF1F2",
         100: "#FFE4E6",
@@ -84,12 +84,12 @@ export default {
         800: "#9F1239",
         900: "#881337",
       },
-      black: "#000000",
-      white: "#FFFFFF",
-      transparent: "transparent",
-      current: "currentColor",
+      "black": "#000000",
+      "white": "#FFFFFF",
+      "transparent": "transparent",
+      "current": "currentColor",
       "dashboard-bg": "#F4F7FE",
-      divider: "#f1f5f9",
+      "divider": "#f1f5f9",
     },
     extend: {
       fontSize: {
@@ -101,9 +101,9 @@ export default {
         "label-sm": ["12px", { lineHeight: "16px", fontWeight: 400 }],
         "label-md": ["13px", { lineHeight: "16px", fontWeight: 400 }],
         "label-lg": ["16px", { lineHeight: "20px", fontWeight: 700 }],
-        button3: ["14px", { lineHeight: "20px", fontWeight: 500 }],
-        button2: ["14px", { lineHeight: "20px", fontWeight: 700 }],
-        button1: ["16px", { lineHeight: "20px", fontWeight: 700 }],
+        "button3": ["14px", { lineHeight: "20px", fontWeight: 500 }],
+        "button2": ["14px", { lineHeight: "20px", fontWeight: 700 }],
+        "button1": ["16px", { lineHeight: "20px", fontWeight: 700 }],
         "title-sm": ["16px", { lineHeight: "20px", fontWeight: 600 }],
         "title-md": ["18px", { lineHeight: "23px", fontWeight: 700 }],
         "title-lg": ["22px", { lineHeight: "28px", fontWeight: 600 }],
@@ -123,7 +123,7 @@ export default {
       themes: {
         light: {
           colors: {
-            primary: {
+            "primary": {
               DEFAULT: "#5A38F4",
               //@ts-ignore
               used: "#5A38F4",
@@ -133,7 +133,7 @@ export default {
               writeup: "#2B3674",
               light: "#EFF4FB",
             },
-            gray: {
+            "gray": {
               DEFAULT: "#64748B",
               50: "#F8FAFC",
               100: "#F1F5F9",
@@ -146,7 +146,7 @@ export default {
               800: "#1E293B",
               900: "#0F172A",
             },
-            neutral: {
+            "neutral": {
               DEFAULT: "#77777A",
               50: "#F8F8F8",
               100: "#E4E2E6",
@@ -159,7 +159,7 @@ export default {
               800: "#303034",
               900: "#1B1B1F",
             },
-            success: {
+            "success": {
               DEFAULT: "#10B981",
               50: "#ECFDF5",
               100: "#D1FAE5",
@@ -172,7 +172,7 @@ export default {
               800: "#065F46",
               900: "#064E3B",
             },
-            warning: {
+            "warning": {
               DEFAULT: "#F59E0B",
               50: "#FFFBEB",
               100: "#FEF3C7",
@@ -185,7 +185,7 @@ export default {
               800: "#92400E",
               900: "#78350F",
             },
-            error: {
+            "error": {
               DEFAULT: "#F43F5E",
               50: "#FFF1F2",
               100: "#FFE4E6",
@@ -198,15 +198,15 @@ export default {
               800: "#9F1239",
               900: "#881337",
             },
-            black: "#000000",
-            white: "#FFFFFF",
-            transparent: "transparent",
-            current: "currentColor",
+            "black": "#000000",
+            "white": "#FFFFFF",
+            "transparent": "transparent",
+            "current": "currentColor",
             "dashboard-bg": "#F4F7FE",
-            divider: "#f1f5f9",
+            "divider": "#f1f5f9",
           },
         },
       },
     }),
   ],
-} satisfies Config;
+} satisfies Config

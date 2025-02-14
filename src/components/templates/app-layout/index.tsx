@@ -1,6 +1,6 @@
-import { FC } from "@/utils/types";
-import React from "react";
-import Header from "./header";
+import { FC } from "@/utils/types"
+import React from "react"
+import Header from "./header"
 
 const AppLayout: FC = ({ children }) => {
   return (
@@ -8,7 +8,7 @@ const AppLayout: FC = ({ children }) => {
       <Header />
       {children}
     </div>
-  );
-};
+  )
+}
 
-export default AppLayout;
+export default AppLayout

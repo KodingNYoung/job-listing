@@ -1,16 +1,16 @@
-import { cls } from "@/utils/helpers";
-import { FC } from "@/utils/types";
-import React, { ReactNode } from "react";
-import Typography, { TypographyProps } from "../atoms/Typography";
+import { cls } from "@/utils/helpers"
+import { FC } from "@/utils/types"
+import React, { ReactNode } from "react"
+import Typography, { TypographyProps } from "../atoms/Typography"
 
 type Props = {
-  startContent?: ReactNode;
-  endContent?: ReactNode;
-  description?: string;
-  label: string;
-  titleProps?: TypographyProps;
-  descriptionProps?: TypographyProps;
-};
+  startContent?: ReactNode
+  endContent?: ReactNode
+  description?: string
+  label: string
+  titleProps?: TypographyProps
+  descriptionProps?: TypographyProps
+}
 
 const Item: FC<Props> = ({
   startContent,
@@ -39,7 +39,7 @@ const Item: FC<Props> = ({
       </div>
       {endContent}
     </div>
-  );
-};
+  )
+}
 
-export default Item;
+export default Item

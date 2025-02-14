@@ -1,24 +1,26 @@
-import { createElement, HTMLProps, ReactNode } from "react";
-import { ColorVariants, FC, TypographyVariants } from "@/utils/types";
-import { cls } from "@/utils/helpers";
+import { createElement, HTMLProps, ReactNode } from "react"
+import { ColorVariants, FC, TypographyVariants } from "@/utils/types"
+import { cls } from "@/utils/helpers"
 
-export type TypographyProps = HTMLProps<HTMLHeadingElement & HTMLParagraphElement> & {
-  variants?: TypographyVariants;
-  element?: keyof HTMLElementTagNameMap;
-  elementProps?: Omit<{ [key: string]: any }, "className" | "children">;
-  align?: "left" | "center" | "right";
-  weight?: 400 | 500 | 600 | 700;
-  noWrap?: boolean;
-  overflowLines?: 1 | 2 | 3 | 4 | 5 | 6;
-  color?: ColorVariants;
-};
+export type TypographyProps = HTMLProps<
+  HTMLHeadingElement & HTMLParagraphElement
+> & {
+  variants?: TypographyVariants
+  element?: keyof HTMLElementTagNameMap
+  elementProps?: Omit<{ [key: string]: unknown }, "className" | "children">
+  align?: "left" | "center" | "right"
+  weight?: 400 | 500 | 600 | 700
+  noWrap?: boolean
+  overflowLines?: 1 | 2 | 3 | 4 | 5 | 6
+  color?: ColorVariants
+}
 
 function getElement(
   variant: TypographyVariants,
   children: ReactNode,
   className: string,
   element?: keyof HTMLElementTagNameMap,
-  props: any = {}
+  props: HTMLProps<unknown> = {}
 ) {
   switch (variant) {
     case "display-lg":
@@ -26,37 +28,37 @@ function getElement(
         (element as unknown as string) || "h1",
         { ...props, className: cls(variant, className) },
         children
-      );
+      )
     case "display-md":
       return createElement(
         (element as unknown as string) || "h2",
         { ...props, className: cls(variant, className) },
         children
-      );
+      )
     case "display-sm":
       return createElement(
         (element as unknown as string) || "h3",
         { ...props, className: cls(variant, className) },
         children
-      );
+      )
     case "headline-lg":
       return createElement(
         (element as unknown as string) || "h4",
         { ...props, className: cls(variant, className) },
         children
-      );
+      )
     case "headline-md":
       return createElement(
         (element as unknown as string) || "h5",
         { ...props, className: cls(variant, className) },
         children
-      );
+      )
     case "headline-sm":
       return createElement(
         (element as unknown as string) || "h6",
         { ...props, className: cls(variant, className) },
         children
-      );
+      )
     case "title-lg":
     case "title-md":
     case "title-sm":
@@ -75,7 +77,7 @@ function getElement(
         (element as unknown as string) || "p",
         { ...props, className: cls(variant || "body-lg", className) },
         children
-      );
+      )
   }
 }
 
@@ -83,14 +85,14 @@ const alignProps = {
   left: "text-left",
   center: "text-center",
   right: "text-right",
-};
+}
 
 const weightProps = {
   400: "font-regular",
   500: "font-medium",
   600: "font-semi-bold",
   700: "font-bold",
-};
+}
 
 const overflowProps = {
   1: "line-clamp-1",
@@ -99,7 +101,7 @@ const overflowProps = {
   4: "line-clamp-4",
   5: "line-clamp-5",
   6: "line-clamp-6",
-};
+}
 
 const textColorsProps = {
   primary: "text-primary",
@@ -114,7 +116,7 @@ const textColorsProps = {
   neutral: "text-neutral",
   gray: "text-gray",
   primary_dark: "text-primary-600",
-};
+}
 
 const Typography: FC<TypographyProps> = ({
   children,
@@ -142,7 +144,7 @@ const Typography: FC<TypographyProps> = ({
     ),
     element,
     { ...elementProps, ...props }
-  );
-};
+  )
+}
 
-export default Typography;
+export default Typography
