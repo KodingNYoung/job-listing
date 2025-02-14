@@ -1,0 +1,83 @@
+.display-lg,
+h1 {
+    @apply text-display-lg;
+}
+
+.display-md,
+h2 {
+    @apply text-display-md;
+}
+
+.display-sm,
+h3 {
+    @apply text-display-sm;
+}
+
+.headline-lg,
+h4 {
+    @apply text-headline-lg;
+}
+
+.headline-md,
+h5 {
+    @apply text-headline-md;
+}
+
+.headline-sm,
+h6 {
+    @apply text-headline-sm;
+}
+
+.title-lg {
+    @apply text-title-lg;
+}
+
+.title-md {
+    @apply text-title-md;
+}
+
+.title-sm {
+    @apply text-title-sm;
+}
+
+.button1 {
+    @apply text-button1;
+}
+
+.button2 {
+    @apply text-button2;
+}
+
+.button3,
+button {
+    @apply text-button3;
+}
+
+.label-lg {
+    @apply text-label-lg;
+}
+
+.label-md {
+    @apply text-label-md;
+}
+
+.label-sm {
+    @apply text-label-sm;
+}
+
+.body-lg,
+p {
+    @apply text-body-lg;
+}
+
+.body-md {
+    @apply text-body-md;
+}
+
+.body-sm {
+    @apply text-body-sm;
+}
+
+.body-xs {
+    @apply text-body-xs;
+}

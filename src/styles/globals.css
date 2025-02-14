@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 @layer base {
-  /* @import url(../assets/icomoon/style.css); */
+  @import url(../assets/icomoon/style.css);
   html {
     /*noinspection CssUnresolvedCustomProperty*/
     font-size: 16px;
     @apply scroll-smooth antialiased;
   }
   body {
-    @apply min-h-screen bg-neutral-50;
+    @apply min-h-screen bg-dashboard-bg;
   }
 }
 
@@ -18,4 +18,12 @@
   .container {
     @apply !w-full !max-w-[1280px] mx-auto;
   }
+}
+
+@layer utilities {
+    @import url(./typography.css);
+}
+
+html {
+    font-family: var(--app-font);
 }
