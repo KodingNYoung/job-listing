@@ -11,7 +11,6 @@ type ParamsProps = {
 const JobDetailsPage: PageFC<ParamsProps> = async ({ params }) => {
   const id = (await params)?.id as string
   const job = await getJobDetails(id)
-  console.log(job, decodeURIComponent(id))
   return (
     <Suspense fallback={<PageLoader />}>
       <JobDetails job={job?.[0]} />

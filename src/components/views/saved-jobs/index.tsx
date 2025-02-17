@@ -7,7 +7,7 @@ import { SavedJobsProvider } from "@/provider/saved-jobs"
 const SavedJobs: FC = () => {
   return (
     <SavedJobsProvider>
-      <div className="px-5">
+      <div className="pt-[75px] px-5">
         <header className="sticky top-[75px] z-[1] bg-white py-10">
           <Typography element="h1" variants="headline-md" className="">
             Saved Jobs

@@ -51,7 +51,6 @@ const ListingsActions: FC = () => {
             value: type.query,
           }))}
           onChange={(value) => {
-            console.log(value)
             batchSet([
               {
                 key: LISTINGS_QUERY_KEYS.EMPLOYMENT_TYPE,
