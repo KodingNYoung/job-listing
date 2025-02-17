@@ -35,7 +35,6 @@ export const SavedJobsProvider: FC = ({ children }) => {
   const getJobsByIds = async (ids: string[]) => {
     setLoading(true)
     const jobs = (await getJobDetails(ids.join(","))) as JobListing[]
-    console.log({ jobs })
     setLoading(false)
 
     const memoizedJobs = (jobs || []).reduce(
